@@ -2,14 +2,16 @@
 
 body{
 	margin: 0;
-	background-color:rgb(250, 245, 245);
+	background-color:rgb(253, 252, 252);
 }
 
 ul {
 	list-style-type: none;
+	padding-left:10px;
+	;
   }
   
-li {
+.cabezal li {
 	float: left;  
 	display: block;
 	padding-left: 100px;

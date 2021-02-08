@@ -1,30 +1,70 @@
 <div class="row">
     <!-- columna del listador de propiedades-->
     <div class="col-sm-3">
-        <h3>Zapatillas</h3>
-        <hr style="border: 2px solid black">
+        <h4>Zapatillas</h4>
+        <hr style="border: 1px solid black">
         <h5>Filtrar</h5>
-        <ul><span>Categoría</span >
-            <!--
-            <li *ngFor="let movie of Movies">
-                {{item.tipo}}
-            </li>
-            -->
-            <li>Zapatillas</li>
-            <li>Zapatos</li>
+        <h6 style="background-color: lightgray" >Categoría</h6 > 
+        <ul >
+            <li >Zapatillas</li>
+            <li >Zapatos</li>
+            <li >Botas</li>
+            <li >Sandalias</li>
+            <li >Pantuflas</li>
         </ul>
+        <h6 style="background-color: lightgray" >Talle</h6 > 
+        <ul>
+            <li >36</li>
+            <li >38</li>
+            <li >40</li>
+            <li >42</li>
+            <li >44</li>
+        </ul>
+            <h6 style="background-color: lightgray" >Color</h6>
+        <ul>
+            <li >Amarillo</li>
+            <li >Negro</li>
+            <li >Verde</li>
+            <li >Azul</li>
+            <li >Blanco</li>
+            
+        </ul>
+
     </div>
 
 
-    <!-- columna de la tabla de productos-->
+    <!-- columna de la tabla de productos
+    let hero of heroes; let i = index
+
+    class="d-flex flex-wrap" style="width: 300px"
+    -->
     <div class="col-sm-9">
-        <div class="row">
-            <div class="col">primera foto</div>
-            <div class="col">primera foto</div>
-            <div class="col">primera foto</div>
+        <div class="row d-flex flex-wrap"  >
+            <div class="col-sm-4 d-flex pb-4 order-1" *ngFor=" let hero of heroes" >
+                <div class="card" > {{i}} 
+                     <img [src]="hero.url"
+                    class="card-img-top"  alt="..."/>
+                     <span class="card-title" style="border-top: 1px solid black;">
+                      <b>{{hero.precio | currency:'' }}</b> -  {{hero.desc}}</span>
+                </div>
+            </div>
+            <!--
+            <div class="col-sm-3 d-flex pb-3  order-2">
+                <div class="card"> 
+                     <img [src]="hero.url"
+                    class="card-img-top"  alt="..."/>
+                    <p class="card-title" style="border-top: 1px solid black;">{{hero.desc}}</p> 
+                </div>
+            </div>
+            <div class="col-sm-3 d-flex pb-3  order-3">
+                <div class="card"> 
+                     <img [src]="hero.url"
+                    class="card-img-top"  alt="..."/>
+                     <p class="card-title" style="border-top: 1px solid black;">{{hero.desc}}</p>
+                </div>
+            </div>
+            -->
         </div>
-
-
 
     </div>
 </div>
