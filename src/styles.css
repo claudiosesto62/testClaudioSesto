@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+	margin: 0;
+	background-color:rgb(250, 245, 245);
+}
+
+ul {
+	list-style-type: none;
+  }
+  
+li {
+	float: left;  
+	display: block;
+	padding-left: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 18px;
+  }
+ 
+.cabezal {
+  background-color:black; 
+  justify-content: center;
+  color: white; 
+  padding-top: 10px;
+ display: flex;
+} 
