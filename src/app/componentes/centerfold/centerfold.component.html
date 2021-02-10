@@ -5,7 +5,7 @@
         <hr style="border: 1px solid black">
         <h5>Filtrar</h5>
         <h6 style="background-color: lightgray" >Categoría</h6 > 
-        <ul >
+        <ul (click)="selectCategoria($event, 1)" >
             <li >Zapatillas</li>
             <li >Zapatos</li>
             <li >Botas</li>
@@ -13,7 +13,7 @@
             <li >Pantuflas</li>
         </ul>
         <h6 style="background-color: lightgray" >Talle</h6 > 
-        <ul>
+        <ul (click)="selectCategoria($event, 2)">
             <li >36</li>
             <li >38</li>
             <li >40</li>
@@ -21,7 +21,7 @@
             <li >44</li>
         </ul>
             <h6 style="background-color: lightgray" >Color</h6>
-        <ul>
+        <ul (click)="selectCategoria($event, 3)">
             <li >Amarillo</li>
             <li >Negro</li>
             <li >Verde</li>
@@ -40,8 +40,8 @@
     -->
     <div class="col-sm-9">
         <div class="row d-flex flex-wrap"  >
-            <div class="col-sm-4 d-flex pb-4 order-1" *ngFor=" let hero of heroes" >
-                <div class="card" > {{i}} 
+            <div class="col-sm-4 d-flex pb-4 order-1" *ngFor=" let hero of getElementos()" >
+                <div class="card" >
                      <img [src]="hero.url"
                     class="card-img-top"  alt="..."/>
                      <span class="card-title" style="border-top: 1px solid black;">
